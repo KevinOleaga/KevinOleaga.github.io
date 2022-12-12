@@ -31,13 +31,12 @@
         Subject: "EduNAO",
         Body: document.getElementById('message').value
       }).then(
+        window.location.href = "index.html",
         Swal.fire(
           'Mensaje enviado!',
           'En breve nos pondremos en contacto contigo!',
           'success'
-        ),
-        wait(5000),
-        window.location.href = "index.html",
+        )
       );
 
       function wait(ms) {
@@ -512,7 +511,7 @@
           </ul>
         </div>
         <div class="col-lg-12">
-          <p class="copyright">Copyright © 2022 EduNAO v2.5, Ltd. All Rights Reserved. 
+          <p class="copyright">Copyright © 2022 EduNAO v2.6, Ltd. All Rights Reserved. 
           </p>
         </div>
       </div>
