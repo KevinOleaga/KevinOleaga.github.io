@@ -1,35 +1,3 @@
-function validateEmail() {
-    var emailID = document.getElementById('email').value;
-    atpos = emailID.indexOf("@");
-    dotpos = emailID.lastIndexOf(".");
-    
-    if (atpos < 1 || ( dotpos - atpos < 2 )) {
-       alert("Please enter correct email ID")
-       document.myForm.EMail.focus() ;
-       return false;
-    }
-    return(true);
- }
-
- function validate() {
-    if( document.getElementById('name').value == "" ) {
-       alert( "Please provide your name!" );
-       document.myForm.Name.focus() ;
-       return false;
-    }
-    if( document.getElementById('email').value == "" ) {
-        alert( "Please provide your Email!" );
-        document.myForm.EMail.focus() ;
-        return false;
-     }
-     if( document.getElementById('message').value == "" ) {
-        alert( "Please provide your message" );
-        document.myForm.EMail.focus() ;
-        return false;
-     }
-    return( true );
- }
-
  function sendEmail() {
     alert("test")
     Email.send({
