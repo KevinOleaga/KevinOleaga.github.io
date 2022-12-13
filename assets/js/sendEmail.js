@@ -1,50 +1,54 @@
-estado = 0;
+estado = "";
 
 function validarCampos() {
     if (!document.getElementById("name").value == "") {
-        estado = 1,
-        alert("name " + estado)
+        estado = "OK";
     } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'El espacio "Nombre" no puede estar vacío'
-        })
-        estado = 0;
-        alert("name2 " + estado)
+        estado = "FAIL_NAME";
     }
 
     if (!document.getElementById("email").value == "") {
-        estado = 1;
-        alert("email " + estado)
+        estado = "OK";
     } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'El espacio "email" no puede estar vacío'
-        })
-        estado = 0;
-        alert("email2 " + estado)
+        estado = "FAIL_EMAIL";
     }
 
     if (!document.getElementById("message").value == "") {
-        estado = 1;
-        alert("message " + estado)
+        estado = "OK";
     } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'El espacio "Mensaje" no puede estar vacío'
-        })
-        estado = 0;
-        alert("message2 " + estado)
+        estado = "FAIL_MESSAGE";
+    }
+
+    switch (estado) {
+        case "FAIL_NAME":
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'El espacio "Nombre" no puede estar vacío'
+            })
+            break;
+        case "FAIL_EMAIL":
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'El espacio "email" no puede estar vacío'
+            })
+            break;
+        case "FAIL_MESSAGE":
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'El espacio "Mensaje" no puede estar vacío'
+            })
+            break;
     }
 }
 
 function sendEmail() {
     validarCampos()
     alert(estado)
-    if (estado == 1) {
+
+    if (estado == "OK") {
         alert("aber")
         Email.send({
             SecureToken: "2c1fa375-3443-477d-bc0a-0384c5b6aaae",
@@ -54,7 +58,6 @@ function sendEmail() {
             Body: document.getElementById('message').value
         }).then(
             window.location.href = "index.html",
-            alert("hola")
         );
     }
 }
