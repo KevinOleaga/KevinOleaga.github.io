@@ -1,44 +1,34 @@
 estado = "";
+campo = "";
 
 function validarCampos() {
     if (!document.getElementById("name").value == "") {
         estado = "OK";
     } else {
-        estado = "FAIL_NAME";
+        estado = "FAIL";
+        campo = "Nombre";
     }
 
     if (!document.getElementById("email").value == "") {
         estado = "OK";
     } else {
-        estado = "FAIL_EMAIL";
+        estado = "FAIL";
+        campo = "Email";
     }
 
     if (!document.getElementById("message").value == "") {
         estado = "OK";
     } else {
-        estado = "FAIL_MESSAGE";
+        estado = "FAIL";
+        campo = "Mensaje";
     }
 
     switch (estado) {
-        case "FAIL_NAME":
+        case "FAIL":
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'El espacio "Nombre" no puede estar vacío'
-            })
-            break;
-        case "FAIL_EMAIL":
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'El espacio "email" no puede estar vacío'
-            })
-            break;
-        case "FAIL_MESSAGE":
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'El espacio "Mensaje" no puede estar vacío'
+                text: 'El espacio "' + campo + '" no puede estar vacío'
             })
             break;
     }
