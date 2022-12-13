@@ -38,7 +38,7 @@ function validarCampos() {
 function sendEmail() {
     validarCampos()
     alert(estado)
-    if (estado == "1") {
+    if (estado === 1) {
         alert("aber")
         Email.send({
             SecureToken: "2c1fa375-3443-477d-bc0a-0384c5b6aaae",
