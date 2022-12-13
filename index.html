@@ -18,63 +18,6 @@
   <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
-
-  <script src="assets/js/smtp.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-  <script type="text/javascript">
-    var status = 0;
-
-    function validarCampos() {
-
-      if (!document.getElementById("name").value == "") {
-        status = 1;
-      } else {
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'El espacio "Nombre" no puede estar vacío'
-        })
-        status = 0;
-      }
-
-      if (!document.getElementById("email").value == "") {
-        status = 1;
-      } else {
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'El espacio "email" no puede estar vacío'
-        })
-        status = 0;
-      }
-
-      if (!document.getElementById("message").value == "") {
-        status = 1;
-      } else {
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'El espacio "Mensaje" no puede estar vacío'
-        })
-        status = 0;
-      }
-    }
-
-    function sendEmail() {
-      if (status == 1) {
-        Email.send({
-          SecureToken: "2c1fa375-3443-477d-bc0a-0384c5b6aaae",
-          To: document.getElementById('email').value,
-          From: "oleaga717@gmail.com",
-          Subject: "EduNAO",
-          Body: document.getElementById('message').value
-        }).then(
-          window.location.href = "index.html"
-        );
-      }
-    }
-  </script>
 </head>
 
 <body>
@@ -504,18 +447,17 @@
                 <fieldset>
                   <div class="col-lg-12">
                     <fieldset>
-                      <input type="name" name="name" id="name" placeholder="Nombre completo" autocomplete="on" required="">
+                      <input type="name" name="name" id="name" placeholder="Nombre completo" autocomplete="on">
                     </fieldset>
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <input type="text" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                        placeholder="Email" required="">
+                      <input type="text" name="email" id="email" placeholder="Email">
                     </fieldset>
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <textarea name="message" required="" id="message" placeholder="Mensaje"></textarea>
+                      <textarea name="message" id="message" placeholder="Mensaje"></textarea>
                     </fieldset>
                   </div>
                   <div class="col-lg-12">
@@ -559,6 +501,10 @@
   <script src="assets/js/video.js"></script>
   <script src="assets/js/slick-slider.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/smtp.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="assets/js/sendEmail.js"></script>
+
   <script>
     //according to loftblog tut
     $('.nav li:first').addClass('active');
