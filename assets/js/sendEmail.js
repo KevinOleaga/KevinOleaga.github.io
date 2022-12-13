@@ -42,8 +42,6 @@ function sendEmail() {
             From: "oleaga717@gmail.com",
             Subject: "EduNAO",
             Body: document.getElementById('message').value
-        }).then(
-            window.location.href = "index.html",
-        );
+        });
     }
 }
