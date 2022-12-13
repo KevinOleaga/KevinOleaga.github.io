@@ -31,6 +31,7 @@ function validarCampos() {
 }
 
 function sendEmail() {
+    alert("test")
     validarCampos()
     alert(estado)
 
