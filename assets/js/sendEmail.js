@@ -3,24 +3,20 @@ campo = "";
 
 function validarCampos() {
     if (!document.getElementById("name").value == "") {
-        estado = "OK";
+        if (!document.getElementById("email").value == "") {
+            if (!document.getElementById("message").value == "") {
+                estado = "OK";
+            } else {
+                estado = "FAIL";
+                campo = "Mensaje";
+            }
+        } else {
+            estado = "FAIL";
+            campo = "Email";
+        }
     } else {
         estado = "FAIL";
         campo = "Nombre";
-    }
-
-    if (!document.getElementById("email").value == "") {
-        estado = "OK";
-    } else {
-        estado = "FAIL";
-        campo = "Email";
-    }
-
-    if (!document.getElementById("message").value == "") {
-        estado = "OK";
-    } else {
-        estado = "FAIL";
-        campo = "Mensaje";
     }
 
     switch (estado) {
