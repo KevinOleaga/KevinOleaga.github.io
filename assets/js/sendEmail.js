@@ -1,6 +1,5 @@
 estado = "";
 campo = "";
-document.getElementById("version").innerHTML = "Copyright © 2022 EduNAO v2.18, Ltd. All Rights Reserved.";
 
 function validarCampos() {
     if (!document.getElementById("name").value == "") {
