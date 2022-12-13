@@ -2,7 +2,8 @@ estado = 0;
 
 function validarCampos() {
     if (!document.getElementById("name").value == "") {
-        estado = 1;
+        estado = 1,
+        alert("name " + estado)
     } else {
         Swal.fire({
             icon: 'error',
@@ -10,10 +11,12 @@ function validarCampos() {
             text: 'El espacio "Nombre" no puede estar vacío'
         })
         estado = 0;
+        alert("name2 " + estado)
     }
 
     if (!document.getElementById("email").value == "") {
         estado = 1;
+        alert("email " + estado)
     } else {
         Swal.fire({
             icon: 'error',
@@ -21,10 +24,12 @@ function validarCampos() {
             text: 'El espacio "email" no puede estar vacío'
         })
         estado = 0;
+        alert("email2 " + estado)
     }
 
     if (!document.getElementById("message").value == "") {
         estado = 1;
+        alert("message " + estado)
     } else {
         Swal.fire({
             icon: 'error',
@@ -32,6 +37,7 @@ function validarCampos() {
             text: 'El espacio "Mensaje" no puede estar vacío'
         })
         estado = 0;
+        alert("message2 " + estado)
     }
 }
 
