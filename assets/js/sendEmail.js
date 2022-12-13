@@ -6,6 +6,6 @@ function sendEmail() {
         Subject: "EduNAO",
         Body: document.getElementById('message').value
     }).then(
-        window.location.href = "index.html",
+        window.location.href = "index.html"
     );
 }
