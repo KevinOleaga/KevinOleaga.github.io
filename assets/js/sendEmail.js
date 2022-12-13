@@ -1,5 +1,6 @@
 estado = "";
 campo = "";
+document.getElementById("version").innerHTML = "Copyright © 2022 EduNAO v2.18, Ltd. All Rights Reserved.";
 
 function validarCampos() {
     if (!document.getElementById("name").value == "") {
@@ -43,5 +44,9 @@ function sendEmail() {
             Subject: "EduNAO",
             Body: document.getElementById('message').value
         });
+        
+        document.getElementById("name").innerHTML = "";
+        document.getElementById("email").innerHTML = "";
+        document.getElementById("message").innerHTML = "";
     }
 }
