@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
+
+  <script src="assets/js/sendEmail.js"></script>
 </head>
 
 <body>
@@ -432,7 +434,7 @@
           </div>
         </div>
         <div class="col-lg-4">
-          <form id="contact" action="">
+          <form id="contact" action="" onsubmit="sendEmail()">
             <div class="row">
               <div class="col-lg-12">
                 <div class="section-heading">
@@ -447,12 +449,14 @@
                 <fieldset>
                   <div class="col-lg-12">
                     <fieldset>
-                      <input type="name" name="name" id="name" placeholder="Nombre completo" autocomplete="on" required/>
+                      <input type="name" name="name" id="name" placeholder="Nombre completo" autocomplete="on"
+                        required />
                     </fieldset>
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" required/>
+                      <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                        placeholder="Email" required />
                     </fieldset>
                   </div>
                   <div class="col-lg-12">
@@ -462,7 +466,8 @@
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <button type="submit" onsubmit="sendEmail()" id="form-submit" class="main-gradient-button">Enviar mensaje</button>
+                      <button type="submit"  id="form-submit" class="main-gradient-button">Enviar
+                        mensaje</button>
                     </fieldset>
                   </div>
                 </fieldset>
@@ -480,7 +485,7 @@
           </ul>
         </div>
         <div class="col-lg-12">
-          <p class="copyright">Copyright © 2022 EduNAO v3.0.5, Ltd. All Rights Reserved.</p>
+          <p class="copyright">Copyright © 2022 EduNAO v3.0.6, Ltd. All Rights Reserved.</p>
         </div>
       </div>
     </div>
@@ -501,7 +506,6 @@
   <script src="assets/js/custom.js"></script>
   <script src="assets/js/smtp.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="assets/js/sendEmail.js"></script>
 
   <script>
     //according to loftblog tut
